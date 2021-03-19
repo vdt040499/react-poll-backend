@@ -18,12 +18,14 @@ const pollSchema = new mongoose.Schema({
 
     firstOptionVotes: {
         type: Number,
-        require: true
+        require: true,
+        default: 0
     },
 
     secondOptionVotes: {
         type: Number,
-        require: true
+        require: true,
+        default: 0
     }
 });
 

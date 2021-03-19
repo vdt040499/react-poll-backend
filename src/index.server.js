@@ -5,6 +5,7 @@ const app = express();
 
 //Routes
 const userRoutes = require("./routes/user.route");
+const pollRoutes = require("./routes/poll.route");
 
 // Middleware
 env.config();
@@ -24,7 +25,8 @@ mongoose
     console.log("Database connected!");
   });
 
-app.use("/api", userRoutes);
+app.use("/api/user", userRoutes);
+app.use("/api/poll", pollRoutes);
 
 app.listen(process.env.PORT, () => {
   console.log(`Server is running on port ${process.env.PORT}`);
